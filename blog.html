@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+</style>
+<body>
+    <h1>Answers of the Required Questions</h1>
+    <h3>1. Difference between map, forEach, find, and filter</h3>
+    <p>map() → Executes a function on each element of an array. Every element of the array is passed to the callback function and returns a new array with the same length.
+    <p>forEach() →It is just a plain form of for loop that can be used to iterate through array items, it allows to change elements of original array and returns undefined.</p>
+    <p>The JavaScript array method find() → returns the first matching element.</p>
+    <p> While the array method filter() → returns an array of all matching elements.</p>
+    <h3>2. Difference between Local Storage, Session Storage and Cookies</h3>
+    <p>The local storage object stores data with no expiration date. The data is not deleted when the browser is closed, and are available for future sessions.</p>
+    <p>The session storage data is only available during the browser session. It stores data for one session (data is lost when the browser tab is closed).</p>
+    <p>Cookies in JavaScript are used to read from and store small data related to the user on the browser. Cookies are mainly for reading server-side.</p>
+    <h3>3. Event Loop and it's functionality</h3>
+    <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. <br>
+        <br> Event loop in JavaScript is a mechanism through which the 'calls waiting for execution' in the callback queue/job queue can be put on the call stack. <br>
+        <br>
+        The Event Loop has one simple job - to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
+    <h3>Role of quizTimer() function</h3> 
+    <p>This function is used to calculate the time consumed to give the answers of the 6 quizzes. If all the quizzes are not hit out, the function will return from there otherwise timer function will run. The timer sets the interval of quiz time converting minute to seconds at a round number and it was done dynamically using ternary operator. <br>
+        <br>
+        The timer progressed with 1 second interval and the time was calculated as min + seconds, when it exceeds 60 seconds.
+        <br>
+        <br>
+        When the counter time was even number, text-red-700 was added in countHtml excepts in odd number cases it was selected the light color.
+         </p>   
+    <h3>Role of chooseQuiz() function</h3> 
+    <p>This function takes two parameters for choosing the answers corresponding to index and givenAns and plays role in choosing one option from given four options. The options remain in an array of quizData. So, firstly find method used to select the index of the given answer from the array and it was kept in a variable for conditioning. <br>
+    <br>
+    Answers of the 6 quizzes generated serially in this function. <br>
+    <br>
+    When the given answers of the variable  matches with the right id of the array of quizData, function breaks from there keeping the answers serially in an array otherwise answers were pushed in another array. Finally, displayAnswers function show the answers array from this function.
+ </p>   
+</body>
+</html>
